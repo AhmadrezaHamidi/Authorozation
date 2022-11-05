@@ -77,13 +77,8 @@ namespace AhmadBase.Web.Controllers
         [Authorize]
         public async Task<IActionResult> GetUserIdsFromToken()
         {
-
             var usrId = HttpContext.User.Claims.FirstOrDefault(x => x.Type == "userId");
-        
-            
             return Ok(usrId.ToString());
-
-
         }
 
     
@@ -109,26 +104,6 @@ namespace AhmadBase.Web.Controllers
             return await result.AsyncResult();
 
 
-
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("1gfbfghdfghfghgfh ghghhfghdfhfghdgfhfghghdgfhdgfh23*/"));
-               
-            
-            var cred = new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
-
-
-
-            var token = new JwtSecurityToken("Ahmad.Com", "Ahmad.Com", expires:DateTime.Today.AddDays(5),
-                claims:new List<Claim>()
-            {
-                new Claim("userId","1"),
-                new Claim("role","Admin")
-            },signingCredentials:cred);
-
-
-
-
-            return Ok(new JwtSecurityTokenHandler().WriteToken(token));
 
 
         }

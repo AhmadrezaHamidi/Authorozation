@@ -14,7 +14,4 @@ namespace AhmadBase.Web.Dtos
 
     }
 
-
-
-}
 }
