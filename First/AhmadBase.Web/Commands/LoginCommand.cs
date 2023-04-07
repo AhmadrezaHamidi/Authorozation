@@ -11,6 +11,7 @@ using AhmadBase.Core.Types;
 using AhmadBase.Inferastracter;
 using AhmadBase.Inferastracter.Datas.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 
 namespace AhmadBase.Web.Commands
@@ -21,7 +22,7 @@ namespace AhmadBase.Web.Commands
         public string PassWord { get; set; }
     }
 
-    public class LoginCommandHandler : IRequestHandler<RegisterCommand, ServiceResult<string>>
+    public class LoginCommandHandler : IRequestHandler<LoginCommand, ServiceResult<string>>
     {
         private readonly IUnitOfWork<AppDbContext> unitOfWork;
         private readonly IAES AES;
@@ -31,7 +32,7 @@ namespace AhmadBase.Web.Commands
             this.AES = aES;
         }
 
-        public async Task<ServiceResult<string>> Handle(RegisterCommand request, CancellationToken cancellationToken)
+        public async Task<ServiceResult<string>> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
 
             var repo = unitOfWork.GetRepository<UserEntity>();
@@ -43,7 +44,8 @@ namespace AhmadBase.Web.Commands
                 return ServiceResult.Empty.SetError("This User Is Not Exist").To<string>();
 
 
-            if (userExist.PassWordHash != request.PassWordRepeat)
+            var passHasInput = AES.Encrypt(request.PassWord);
+            if (userExist.PassWordHash != passHasInput)
                 return ServiceResult.Empty.SetError("This User Is Not Exist").To<string>();
 
 
@@ -55,7 +57,7 @@ namespace AhmadBase.Web.Commands
 
 
 
-            var token = new JwtSecurityToken("Ahmad.Com", "Ahmad.Com", expires: DateTime.Today.AddDays(5),
+            var token = new JwtSecurityToken(userExist.Email, expires: DateTime.Today.AddDays(5),
                 claims: new List<Claim>()
                 {
                     new Claim("userId",userExist.Id.ToString()),
