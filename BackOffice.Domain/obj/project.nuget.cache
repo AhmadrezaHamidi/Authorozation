@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "CIjZUUm3KGFXXWLDNBNqlZA0XSHiLhtjxzwU4jOZm5aO0bNwcvm8ju7ChZV4vMiyxGqZyjGPfn5okrnpBy+n4g==",
+  "success": true,
+  "projectFilePath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://192.168.2.164/NugetServer/Nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Api\\BackOffice.Api.csproj": {}
+  },
+  "projects": {
+    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Api\\BackOffice.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Api\\BackOffice.Api.csproj",
+        "projectName": "BackOffice.Api",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Api\\BackOffice.Api.csproj",
+        "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.2.164/NugetServer/Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj"
+              },
+              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj"
+              },
+              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Persistance\\BackOffice.Persistance.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Persistance\\BackOffice.Persistance.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Houshmand.Framework.ExceptionHandler": {
+              "target": "Package",
+              "version": "[0.0.15, )"
+            },
+            "Houshmand.Framework.Logging": {
+              "target": "Package",
+              "version": "[0.0.12, )"
+            },
+            "Houshmand.Framework.Logging.Console": {
+              "target": "Package",
+              "version": "[0.0.11, )"
+            },
+            "Houshmand.Framework.Logging.Files": {
+              "target": "Package",
+              "version": "[0.0.11, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.2, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj",
+        "projectName": "BackOffice.Application",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj",
+        "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.2.164/NugetServer/Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.5.0, )"
+            },
+            "Houshmand.Framework.Configuration.Files": {
+              "target": "Package",
+              "version": "[0.0.15.3, )"
+            },
+            "Houshmand.Framework.WorkFlow": {
+              "target": "Package",
+              "version": "[0.0.17, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
+        "projectName": "BackOffice.Domain",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
+        "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.2.164/NugetServer/Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj",
+        "projectName": "BackOffice.Infrastructure",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.2.164/NugetServer/Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Persistance\\BackOffice.Persistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Persistance\\BackOffice.Persistance.csproj",
+        "projectName": "BackOffice.Persistance",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Persistance\\BackOffice.Persistance.csproj",
+        "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Persistance\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.2.164/NugetServer/Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

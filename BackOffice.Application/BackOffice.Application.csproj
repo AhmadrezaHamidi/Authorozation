@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BackOffice.Domain\BackOffice.Domain.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.0" />
+		<PackageReference Include="Houshmand.Framework.Configuration.Files" Version="0.0.15.3" />
+		<PackageReference Include="Houshmand.Framework.WorkFlow" Version="0.0.17" />
+		<!--<PackageReference Include="Houshmand.Framework.Core" Version="0.0.16" />
+		<PackageReference Include="Houshmand.Framework.ExceptionHandler" Version="0.0.13" />-->
+		<PackageReference Include="MediatR" Version="11.0.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Features\Command\" />
+	</ItemGroup>
+
+
+
+</Project>
