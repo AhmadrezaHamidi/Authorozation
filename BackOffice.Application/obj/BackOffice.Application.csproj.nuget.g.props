@@ -13,6 +13,16 @@
     <SourceRoot Include="C:\Users\a.hamidi\.nuget\packages\" />
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)houshmand.framework.dataaccess.dapper\0.0.10\contentFiles\any\net6.0\icon.ico" Condition="Exists('$(NuGetPackageRoot)houshmand.framework.dataaccess.dapper\0.0.10\contentFiles\any\net6.0\icon.ico')">
+      <NuGetPackageId>Houshmand.Framework.DataAccess.Dapper</NuGetPackageId>
+      <NuGetPackageVersion>0.0.10</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <Private>False</Private>
+      <Link>icon.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Content Include="$(NuGetPackageRoot)houshmand.framework.configuration.files\0.0.15.3\contentFiles\any\net6.0\icon.ico" Condition="Exists('$(NuGetPackageRoot)houshmand.framework.configuration.files\0.0.15.3\contentFiles\any\net6.0\icon.ico')">
       <NuGetPackageId>Houshmand.Framework.Configuration.Files</NuGetPackageId>
       <NuGetPackageVersion>0.0.15.3</NuGetPackageVersion>

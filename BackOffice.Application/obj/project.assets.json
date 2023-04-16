@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "AutoMapper/12.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Azure.Core/1.25.0": {
         "type": "package",
         "dependencies": {
@@ -550,8 +566,8 @@
           "lib/net6.0/Houshmand.Framework.DataAccess.Dapper.dll": {}
         },
         "contentFiles": {
-          "contentFiles/any/any/_._": {
-            "buildAction": "None",
+          "contentFiles/any/net6.0/icon.ico": {
+            "buildAction": "Content",
             "codeLanguage": "any",
             "copyToOutput": false
           }
@@ -710,7 +726,7 @@
           }
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -1658,6 +1674,21 @@
     }
   },
   "libraries": {
+    "AutoMapper/12.0.1": {
+      "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "type": "package",
+      "path": "automapper/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.12.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.dll",
+        "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
     "Azure.Core/1.25.0": {
       "sha512": "X8Dd4sAggS84KScWIjEbFAdt2U1KDolQopTPoHVubG2y3CM54f9l6asVrP5Uy384NWXjsspPYaJgz5xHc+KvTA==",
       "type": "package",
@@ -2354,10 +2385,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2370,6 +2401,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -2379,7 +2411,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -4128,10 +4160,12 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AutoMapper >= 12.0.1",
       "BackOffice.Domain >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.2.2",
       "FluentValidation.DependencyInjectionExtensions >= 11.5.0",
       "Houshmand.Framework.Configuration.Files >= 0.0.15.3",
+      "Houshmand.Framework.DataAccess.Dapper >= 0.0.10",
       "Houshmand.Framework.WorkFlow >= 0.0.17",
       "MediatR >= 11.0.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.0.0",
@@ -4182,6 +4216,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.1, )"
+          },
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.2.2, )"
@@ -4193,6 +4231,10 @@
           "Houshmand.Framework.Configuration.Files": {
             "target": "Package",
             "version": "[0.0.15.3, )"
+          },
+          "Houshmand.Framework.DataAccess.Dapper": {
+            "target": "Package",
+            "version": "[0.0.10, )"
           },
           "Houshmand.Framework.WorkFlow": {
             "target": "Package",

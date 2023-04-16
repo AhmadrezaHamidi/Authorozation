@@ -42,11 +42,13 @@ namespace BackOffice.Persistance.Repositories
                     Subject = new ClaimsIdentity(new Claim[]
                   {
                      new Claim(ClaimTypes.Name, userName)
+
                   }),
                     Expires = DateTime.Now.AddDays(1),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256)
                 };
                 var token = tokenHandler.CreateToken(tokenDescriptor);
+
                 var refreshToken = GenerateRefreshToken();
                 return new Tokens { Access_Token = tokenHandler.WriteToken(token), Refresh_Token = refreshToken };
             }

@@ -17,6 +17,11 @@ F:\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.
 F:\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.Domain.pdb
 F:\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.csproj.CopyComplete
 F:\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.genruntimeconfig.cache
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.csproj.AssemblyReference.cache
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.AssemblyInfoInputs.cache
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.AssemblyInfo.cs
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.csproj.CoreCompileInputs.cache
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.Persistance.deps.json
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.Persistance.runtimeconfig.json
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.Persistance.dll
@@ -25,11 +30,6 @@ F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistanc
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.Domain.dll
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.Application.pdb
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\bin\Debug\net6.0\BackOffice.Domain.pdb
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.csproj.AssemblyReference.cache
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.GeneratedMSBuildEditorConfig.editorconfig
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.AssemblyInfoInputs.cache
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.AssemblyInfo.cs
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.csproj.CoreCompileInputs.cache
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.csproj.CopyComplete
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\BackOffice.Persistance.dll
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Persistance\obj\Debug\net6.0\refint\BackOffice.Persistance.dll

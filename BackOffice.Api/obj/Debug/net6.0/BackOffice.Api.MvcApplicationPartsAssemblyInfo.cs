@@ -11,7 +11,6 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("BackOffice.Persistance")]
 [assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("FluentValidation.AspNetCore")]
 [assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("Swashbuckle.AspNetCore.SwaggerGen")]
 

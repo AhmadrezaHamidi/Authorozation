@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BackOffice.Api.Controllers
 {
-    [Authorize]
+  
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
@@ -20,6 +20,7 @@ namespace BackOffice.Api.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public List<string> Get()
         {
             var users = new List<string>

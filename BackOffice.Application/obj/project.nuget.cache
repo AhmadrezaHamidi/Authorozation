@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rznqGrVr6u/G/ni2/sVZPPKt3JQIcfqf9209mkKd++lk5KJ9RoNGjTNDNDOHZj3XPAGgYvnaWMOMc6tWrb7iFg==",
+  "dgSpecHash": "Ox42aFVSJceAIxOqSrJBvqhS13xYSxN8l09JUoAAwandGI4eSX3UeN0VwgBGRgurNjRAkrgj+Ru3f56JITFCbQ==",
   "success": true,
   "projectFilePath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\a.hamidi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
@@ -45,7 +46,7 @@
     "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.0\\microsoft.data.sqlclient.5.1.0.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
     "C:\\Users\\a.hamidi\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

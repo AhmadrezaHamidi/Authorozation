@@ -1625,10 +1625,12 @@
       },
       "BackOffice.Application/1.0.0": {
         "dependencies": {
+          "AutoMapper": "12.0.1",
           "BackOffice.Domain": "1.0.0",
           "FluentValidation.AspNetCore": "11.2.2",
           "FluentValidation.DependencyInjectionExtensions": "11.5.0",
           "Houshmand.Framework.Configuration.Files": "0.0.15.3",
+          "Houshmand.Framework.DataAccess.Dapper": "0.0.10",
           "Houshmand.Framework.WorkFlow": "0.0.17",
           "MediatR": "11.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.0.0",

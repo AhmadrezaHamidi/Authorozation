@@ -5,7 +5,9 @@ using Houshmand.Framework.ExceptionHandler;
 using Houshmand.Framework.Logging;
 using Houshmand.Framework.Logging.Console.Extensions;
 using Houshmand.Framework.Logging.Files.Extensions;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +16,47 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(options =>
+{
+
+
+
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "API V1",
+
+    });
+
+    #region Filters
+
+    #region Add UnAuthorized to Response
+
+
+    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+    {
+        Description = "Standard Authorization header using the Bearer scheme. Example: \"bearer {token}\"",
+        In = ParameterLocation.Header,
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    {
+                        new OpenApiSecurityScheme{Reference=new OpenApiReference
+                        {
+                            Id="Bearer",
+                            Type=ReferenceType.SecurityScheme
+                        } },new List<string>()}
+                });
+
+    #endregion
+
+
+
+    #endregion
+});
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 var connectionString = builder.Configuration.GetConnectionString("Local");

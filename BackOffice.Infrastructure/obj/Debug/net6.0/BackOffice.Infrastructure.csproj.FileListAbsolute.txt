@@ -15,6 +15,11 @@ F:\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffi
 F:\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\refint\BackOffice.Infrastructure.dll
 F:\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.pdb
 F:\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\ref\BackOffice.Infrastructure.dll
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.csproj.AssemblyReference.cache
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.AssemblyInfoInputs.cache
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.AssemblyInfo.cs
+F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.csproj.CoreCompileInputs.cache
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\bin\Debug\net6.0\BackOffice.Infrastructure.deps.json
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\bin\Debug\net6.0\BackOffice.Infrastructure.dll
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\bin\Debug\net6.0\BackOffice.Infrastructure.pdb
@@ -22,11 +27,6 @@ F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastruc
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\bin\Debug\net6.0\BackOffice.Domain.dll
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\bin\Debug\net6.0\BackOffice.Application.pdb
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\bin\Debug\net6.0\BackOffice.Domain.pdb
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.csproj.AssemblyReference.cache
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.AssemblyInfoInputs.cache
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.AssemblyInfo.cs
-F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.csproj.CoreCompileInputs.cache
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.csproj.CopyComplete
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\BackOffice.Infrastructure.dll
 F:\AhmadProjectSample\BackOffice\OfficalProject\BackOffice\BackOffice.Infrastructure\obj\Debug\net6.0\refint\BackOffice.Infrastructure.dll
