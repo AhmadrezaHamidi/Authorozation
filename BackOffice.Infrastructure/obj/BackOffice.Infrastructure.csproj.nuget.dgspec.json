@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj": {}
+    "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj": {}
   },
   "projects": {
-    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
+    "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj",
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj",
         "projectName": "BackOffice.Application",
-        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj",
         "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
-        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\obj\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
-                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj"
+              "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj"
               }
             }
           }
@@ -45,21 +45,21 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[8.1.1, )"
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[11.2.2, )"
+              "version": "[11.3.0, )"
             },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
-              "version": "[11.5.0, )"
+              "version": "[11.5.2, )"
             },
             "Houshmand.Framework.Configuration.Files": {
               "target": "Package",
-              "version": "[0.0.15.3, )"
+              "version": "[0.0.15.4, )"
             },
             "Houshmand.Framework.DataAccess.Dapper": {
               "target": "Package",
@@ -67,7 +67,7 @@
             },
             "Houshmand.Framework.WorkFlow": {
               "target": "Package",
-              "version": "[0.0.17, )"
+              "version": "[0.0.17.1, )"
             },
             "MediatR": {
               "target": "Package",
@@ -76,6 +76,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
@@ -102,14 +106,14 @@
         }
       }
     },
-    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
+    "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
         "projectName": "BackOffice.Domain",
-        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
         "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
-        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\obj\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -138,6 +142,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -158,14 +172,14 @@
         }
       }
     },
-    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj": {
+    "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj",
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj",
         "projectName": "BackOffice.Infrastructure",
-        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Infrastructure\\BackOffice.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
-        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Infrastructure\\obj\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -183,8 +197,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
-                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj"
+              "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj": {
+                "projectPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Application\\BackOffice.Application.csproj"
               }
             }
           }

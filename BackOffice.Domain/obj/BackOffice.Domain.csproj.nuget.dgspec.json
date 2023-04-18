@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {}
+    "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {}
   },
   "projects": {
-    "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
+    "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
+        "projectUniqueName": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
         "projectName": "BackOffice.Domain",
-        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
+        "projectPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\BackOffice.Domain.csproj",
         "packagesPath": "C:\\Users\\a.hamidi\\.nuget\\packages\\",
-        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\OfficalProject\\BackOffice\\BackOffice.Domain\\obj\\",
+        "outputPath": "F:\\AhmadProjectSample\\BackOffice\\BackOffice0.0.01\\BackOffice\\BackOffice.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a.hamidi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

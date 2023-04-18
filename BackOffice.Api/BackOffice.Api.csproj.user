@@ -4,6 +4,7 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
+    <ActiveDebugProfile>BackOffice.Api</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Api\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

@@ -1,11 +1,9 @@
-using BackOffice.Api.Mapping;
 using BackOffice.Application;
 using BackOffice.Persistance;
-using Houshmand.Framework.ExceptionHandler;
-using Houshmand.Framework.Logging;
-using Houshmand.Framework.Logging.Console.Extensions;
-using Houshmand.Framework.Logging.Files.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Reflection;
 
@@ -16,22 +14,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddSwaggerGen(options =>
 {
-
-
 
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
         Title = "API V1",
 
+        Description = "UserName = Administrator@localhost" + "" + " Password = Administrator1!"
     });
 
-    #region Filters
-
-    #region Add UnAuthorized to Response
 
 
     options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
@@ -41,6 +34,7 @@ builder.Services.AddSwaggerGen(options =>
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey,
     });
+    options.OperationFilter<SecurityRequirementsOperationFilter>();
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement {
                     {
@@ -51,58 +45,42 @@ builder.Services.AddSwaggerGen(options =>
                         } },new List<string>()}
                 });
 
-    #endregion
-
-
-
-    #endregion
 });
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-
 var connectionString = builder.Configuration.GetConnectionString("Local");
+builder.Services.AddDataServices(builder.Configuration);
 builder.Services.AddApplicationServices(connectionString);
-builder.Services.AddPersistanceService(builder.Configuration);
 
-
-var logManager = new LogBuilder()
-    .MinimumLevel.Info()
-    .WriteTo.Console()
-    .WriteTo.File()
-    .CreateLogger<BaseResponse>();
-builder.Services.AddTransient<Houshmand.Framework.Logging.ILogger<BaseResponse>>(x => logManager);
-
-//builder.Services.AddMediatR(typeof(Program).Assembly);
 
 var app = builder.Build();
 
-app.UseSwagger();
-app.UseSwaggerUI();
+
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+
+        c.DefaultModelExpandDepth(depth: 1);
+        c.DefaultModelRendering(Swashbuckle.AspNetCore.SwaggerUI.ModelRendering.Example);
+        c.DocExpansion(DocExpansion.None);
+
+    });
 
 
-app.UseStaticFiles();
+app.UseHttpsRedirection();
 app.UseRouting();
 
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseDeveloperExceptionPage();
-//    app.UseSwagger();
-//    app.UseSwaggerUI(c =>
-//    {
-//        c.InjectStylesheet("/SwaggerUi/SwaggerDark.css");
-//        c.InjectJavascript("/SwaggerUi/swagger-ui-bundle.js");
-//        c.DefaultModelExpandDepth(depth: 1);
-//        c.DefaultModelRendering(Swashbuckle.AspNetCore.SwaggerUI.ModelRendering.Example);
-//        c.DocExpansion(DocExpansion.None);
-//        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-//        c.RoutePrefix = string.Empty;
-//    });
-//}
+app.UseAuthentication();
 
 app.UseAuthorization();
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-app.UseMiddleware<GlobalExceptionMiddleware>();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "default",
+      pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
+
+});
+//app.MapControllers();
 
 app.Run();
-

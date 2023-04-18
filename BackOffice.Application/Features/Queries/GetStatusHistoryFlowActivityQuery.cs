@@ -15,59 +15,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BackOffice.Application.Features.Queries
+namespace BackOffice.Application.Features.Queries;
+
+public class GetStatusHistoryFlowActivityQuery : IRequest<List<GetStatusHistoryQueryDto>>
 {
-    public class GetStatusHistoryFlowActivityQuery : IRequest<List<GetStatusHistoryQueryDto>>
+    public GetStatusHistoryFlowActivityQuery(string flowActivityUniqueId)
     {
-        public GetStatusHistoryFlowActivityQuery(string flowActivityUniqueId)
-        {
-            this.flowActivityUniqueId = flowActivityUniqueId;
-        }
-        public string flowActivityUniqueId { get; set; }
+        this.flowActivityUniqueId = flowActivityUniqueId;
+    }
+    public string flowActivityUniqueId { get; set; }
+}
+
+
+public class GetStatusHistoryFlowActivityQueryHandler
+    : IRequestHandler<GetStatusHistoryFlowActivityQuery, List<GetStatusHistoryQueryDto>>
+{
+    private readonly IFlowService _flowService;
+    private readonly ILogger<GetStatusHistoryFlowActivityQueryHandler> _logger;
+    private readonly IFlowTracking _flowTracking;
+    private readonly IConfigReader _config;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
+
+    public GetStatusHistoryFlowActivityQueryHandler(IFlowService flowService,
+        IFlowTracking flowTracking,
+        IConfigReader config,
+        IUnitOfWork unitOfWork)
+    {
+        _logger = new LogBuilder()
+            .WriteTo.Console()
+            .CreateLogger<GetStatusHistoryFlowActivityQueryHandler>();
+        _flowService = flowService;
+        _flowTracking = flowTracking;
+        _config = config;
+        _unitOfWork = unitOfWork;
     }
 
-
-    public class GetStatusHistoryFlowActivityQueryHandler
-        : IRequestHandler<GetStatusHistoryFlowActivityQuery, List<GetStatusHistoryQueryDto>>
+    async Task<List<GetStatusHistoryQueryDto>> IRequestHandler<GetStatusHistoryFlowActivityQuery,
+        List<GetStatusHistoryQueryDto>>.Handle(GetStatusHistoryFlowActivityQuery request, CancellationToken cancellationToken)
     {
-        private readonly IFlowService _flowService;
-        private readonly ILogger<GetStatusHistoryFlowActivityQueryHandler> _logger;
-        private readonly IFlowTracking _flowTracking;
-        private readonly IConfigReader _config;
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
-
-        public GetStatusHistoryFlowActivityQueryHandler(IFlowService flowService,
-            IFlowTracking flowTracking,
-            IConfigReader config,
-            IUnitOfWork unitOfWork)
+        try
         {
-            _logger = new LogBuilder()
-                .WriteTo.Console()
-                .CreateLogger<GetStatusHistoryFlowActivityQueryHandler>();
-            _flowService = flowService;
-            _flowTracking = flowTracking;
-            _config = config;
-            _unitOfWork = unitOfWork;
+            var flowId = _flowTracking.CreateFlow(2, 1, new("0.0.11"));
+            var flowStep = _flowTracking.GoToNextStep(flowId, 1);
+            var repo = await _flowService.GetStatusHistoryFlowActivity(request.flowActivityUniqueId);
+
+            var mapper = new MapperConfiguration(cfg => cfg.CreateMap<StatusHistory, GetStatusHistoryQueryDto>()).CreateMapper();
+            var result = mapper.Map<List<GetStatusHistoryQueryDto>>(repo);
+            return result;
         }
-
-        async Task<List<GetStatusHistoryQueryDto>> IRequestHandler<GetStatusHistoryFlowActivityQuery,
-            List<GetStatusHistoryQueryDto>>.Handle(GetStatusHistoryFlowActivityQuery request, CancellationToken cancellationToken)
+        catch (HoushmandBaseException ex)
         {
-            try
-            {
-                var flowId = _flowTracking.CreateFlow(2, 1, new("0.0.11"));
-                var flowStep = _flowTracking.GoToNextStep(flowId, 1);
-                var repo = await _flowService.GetStatusHistoryFlowActivity(request.flowActivityUniqueId);
-
-                var mapper = new MapperConfiguration(cfg => cfg.CreateMap<StatusHistory, GetStatusHistoryQueryDto>()).CreateMapper();
-                var result = mapper.Map<List<GetStatusHistoryQueryDto>>(repo);
-                return result;
-            }
-            catch (HoushmandBaseException ex)
-            {
-                throw ex;
-            }
+            throw ex;
         }
     }
 }

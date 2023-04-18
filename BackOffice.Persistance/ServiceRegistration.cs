@@ -1,110 +1,119 @@
-﻿using BackOffice.Application.Contracts;
+﻿using AutoMapper.Configuration;
+using BackOffice.Application.Contracts;
+using BackOffice.Domain.Entities.Users;
 using BackOffice.Persistance.Context;
-using BackOffice.Persistance.Repositories;
-using BackOffice.Persistance.Services;
+using BackOffice.Persistance.Identity.Manager;
+using BackOffice.Persistance.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using BackOffice.Application.Dtos.ConfigDtos;
+using BackOffice.Persistance.Repositories;
 
 namespace BackOffice.Persistance
 {
     public static class ServiceRegistration
     {
-        public static void AddPersistanceService(this IServiceCollection services, IConfiguration Configuration)
+        public static IServiceCollection AddDataServices(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
-            services.AddEntityFrameworkSqlServer()
-                .AddDbContext<IdentityDbContext>();
-
-
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddDbContext<IdentityDbContext>(options =>
             {
-                options.Password.RequireUppercase = true;
+                options.UseSqlServer(configuration.GetConnectionString("Local"));
+                //options.UseInMemoryDatabase("TicketingDb");
+            });
+            //services.AddEntityFrameworkSqlServer()
+            //   .AddDbContext<IdentityDbContext>();
+
+
+            //services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+            //services.AddScoped<ITicketService, TicketService>();
+            //services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IFlowService, FlowService>();
+
+            services.AddIdentity<User, Role>(option => option.SignIn.RequireConfirmedAccount = false)
+                        .AddEntityFrameworkStores<IdentityDbContext>()
+                                   .AddDefaultTokenProviders();
+            ///TODO NIMIDonam Kodomo bezaram ya mele khodam ya 
+
+
+            services.AddScoped<ITokenInfoService, TokenInfoService>();
+            
+
+            var jwtSettings = new JwtSettings();
+            configuration.Bind(key: nameof(jwtSettings), jwtSettings);
+            services.AddSingleton(jwtSettings);
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Default Password settings.
                 options.Password.RequireDigit = true;
-                options.SignIn.RequireConfirmedEmail = true;
-            }).AddEntityFrameworkStores<IdentityDbContext>()
-            .AddDefaultTokenProviders();
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequiredLength = 8;
+                options.Password.RequiredUniqueChars = 1;
 
-
-            services.AddAuthentication(x =>
-            {
-                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(o =>
-            {
-                var Key = Encoding.UTF8.GetBytes(Configuration["JWT:Key"]);
-                o.SaveToken = true;
-                o.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = false,
-                    ValidateAudience = false,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = Configuration["JWT:Issuer"],
-                    ValidAudience = Configuration["JWT:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Key),
-                    ClockSkew = TimeSpan.Zero,
-                };
-
-                o.Events = new JwtBearerEvents
-                {
-                    OnAuthenticationFailed = context =>
-                    {
-                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-                        {
-                            context.Response.Headers.Add("IS-TOKEN-EXPIRED", "true");
-                            context.Response.StatusCode = 401;
-                            context.Response.ContentType = "application/json";
-                            return context.Response.WriteAsync(JsonConvert.SerializeObject(context.Exception.Message));
-                        }
-                        return Task.CompletedTask;
-                    }
-                };
+                options.User.RequireUniqueEmail = false;
+                options.Lockout.AllowedForNewUsers = false;
+                options.SignIn.RequireConfirmedEmail = false;
             });
 
 
-            services.AddScoped<IJWTManagerRepository, JWTManagerRepository>();
-            services.AddScoped<IUserServiceRepository, UserServiceRepository>();
-            services.AddScoped<IFlowService, FlowService>();
+            services.AddScoped<AppUserManager>();
+            services.AddScoped<AppSignInManager>();
+            services.AddScoped<AppRoleManager>();
 
-            //services
-            //    .AddSwaggerGen(c =>
-            //    {
-            //        var securityScheme = new OpenApiSecurityScheme
-            //        {
-            //            Description = "Bearer {token}",
-            //            Name = "Authorization",
-            //            In = ParameterLocation.Header,
-            //            Type = SecuritySchemeType.Http,
-            //            Scheme = "bearer",
-            //            Reference = new OpenApiReference
-            //            {
-            //                Type = ReferenceType.SecurityScheme,
-            //                Id = "Bearer"
-            //            }
-            //        };
-            //        c.SwaggerDoc("v1", new OpenApiInfo
-            //        {
-            //            Title = "Hooshmand.BackOffice.Api",
-            //            Version = "v1"
-            //        });
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme =
+                      JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme =
+                      JwtBearerDefaults.AuthenticationScheme;
+            })
+           .AddJwtBearer(options =>
+           {
+               options.RequireHttpsMetadata = false;
+               options.SaveToken = true;
+               options.ClaimsIssuer = configuration["Authentication:JwtIssuer"];
 
-            //        c.AddSecurityDefinition("Bearer", securityScheme);
-            //        c.AddSecurityRequirement(new OpenApiSecurityRequirement
-            //    {
-            //        {securityScheme, new [] {"Bearer"} }
-            //    });
-            //    });
+               options.TokenValidationParameters = new TokenValidationParameters
+               {
+                   ValidateIssuer = true,
+                   ValidIssuer = configuration["Authentication:JwtIssuer"],
+
+                   ValidateAudience = true,
+                   ValidAudience = configuration["Authentication:JwtAudience"],
+
+                   ValidateIssuerSigningKey = true,
+                   IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Authentication:JwtKey"])),
+                   RequireExpirationTime = true,
+                   ValidateLifetime = true,
+                   ClockSkew = TimeSpan.Zero
+               };
+           });
 
 
+            services.Configure<DataProtectionTokenProviderOptions>(opt => opt.TokenLifespan = TimeSpan.FromDays(3));
 
-          
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            return services;
+
+
         }
+
+
+
     }
+
 }

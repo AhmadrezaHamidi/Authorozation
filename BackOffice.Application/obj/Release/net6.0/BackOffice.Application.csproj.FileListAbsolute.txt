@@ -1,0 +1,17 @@
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\bin\Release\net6.0\BackOffice.Application.deps.json
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\bin\Release\net6.0\BackOffice.Application.runtimeconfig.json
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\bin\Release\net6.0\BackOffice.Application.dll
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\bin\Release\net6.0\BackOffice.Application.pdb
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\bin\Release\net6.0\BackOffice.Domain.dll
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\bin\Release\net6.0\BackOffice.Domain.pdb
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.csproj.AssemblyReference.cache
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.AssemblyInfoInputs.cache
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.AssemblyInfo.cs
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.csproj.CoreCompileInputs.cache
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.csproj.CopyComplete
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.dll
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\refint\BackOffice.Application.dll
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.pdb
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\BackOffice.Application.genruntimeconfig.cache
+F:\AhmadProjectSample\BackOffice\BackOffice0.0.01\BackOffice\BackOffice.Application\obj\Release\net6.0\ref\BackOffice.Application.dll

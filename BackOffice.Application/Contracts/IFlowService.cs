@@ -1,7 +1,4 @@
-﻿using BackOffice.Application.Dtos;
-using BackOffice.Application.Dtos.Auth;
-using BackOffice.Domain.Entities;
-using Microsoft.AspNetCore.Identity;
+﻿using BackOffice.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +13,4 @@ namespace BackOffice.Application.Contracts
         Task<List<StatusHistory>> GetStatusHistoryFlowActivity(string flowActivityUniqueId);
         Task<List<Top10FlowsWithStatus>> GetTop10FlowsWithStatus(int userId);
     }
-
-    
-    
 }

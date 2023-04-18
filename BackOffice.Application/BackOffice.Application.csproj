@@ -7,27 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BackOffice.Domain\BackOffice.Domain.csproj" />
+    <Folder Include="Features\Commands\" />
   </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="AutoMapper" Version="12.0.1" />
-		<PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
-		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.0" />
-		<PackageReference Include="Houshmand.Framework.Configuration.Files" Version="0.0.15.3" />
-		<PackageReference Include="Houshmand.Framework.DataAccess.Dapper" Version="0.0.10" />
-		<PackageReference Include="Houshmand.Framework.WorkFlow" Version="0.0.17" />
-		<!--<PackageReference Include="Houshmand.Framework.Core" Version="0.0.16" />
-		<PackageReference Include="Houshmand.Framework.ExceptionHandler" Version="0.0.13" />-->
-		<PackageReference Include="MediatR" Version="11.0.0" />
-		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.2" />
+    <PackageReference Include="Houshmand.Framework.Configuration.Files" Version="0.0.15.4" />
+    <PackageReference Include="Houshmand.Framework.DataAccess.Dapper" Version="0.0.10" />
+    <PackageReference Include="Houshmand.Framework.WorkFlow" Version="0.0.17.1" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+	<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.16" />
+  </ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Features\Command\" />
-	</ItemGroup>
-
-
+  <ItemGroup>
+    <ProjectReference Include="..\BackOffice.Domain\BackOffice.Domain.csproj" />
+  </ItemGroup>
 
 </Project>

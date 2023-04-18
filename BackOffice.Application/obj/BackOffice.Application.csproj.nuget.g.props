@@ -23,13 +23,17 @@
     </Content>
   </ItemGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Content Include="$(NuGetPackageRoot)houshmand.framework.configuration.files\0.0.15.3\contentFiles\any\net6.0\icon.ico" Condition="Exists('$(NuGetPackageRoot)houshmand.framework.configuration.files\0.0.15.3\contentFiles\any\net6.0\icon.ico')">
+    <Content Include="$(NuGetPackageRoot)houshmand.framework.configuration.files\0.0.15.4\contentFiles\any\net6.0\icon.ico" Condition="Exists('$(NuGetPackageRoot)houshmand.framework.configuration.files\0.0.15.4\contentFiles\any\net6.0\icon.ico')">
       <NuGetPackageId>Houshmand.Framework.Configuration.Files</NuGetPackageId>
-      <NuGetPackageVersion>0.0.15.3</NuGetPackageVersion>
+      <NuGetPackageVersion>0.0.15.4</NuGetPackageVersion>
       <NuGetItemType>Content</NuGetItemType>
       <Pack>false</Pack>
       <Private>False</Private>
       <Link>icon.ico</Link>
     </Content>
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\6.0.16\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\6.0.16\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.16\build\net6.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.16\build\net6.0\Microsoft.EntityFrameworkCore.Design.props')" />
+  </ImportGroup>
 </Project>
