@@ -19,10 +19,8 @@ namespace BackOffice.Application.Dtos.Auth
         [Required(ErrorMessage = "وارد کردن ایمیل  الزامی است")]
         [EmailAddress(ErrorMessage = "ایمیل وارد شده صحیح نیست")]
         public string Email { get; set; }
-        /// <example>حمید</example>
         [Required(ErrorMessage = "وارد کردن نام  الزامی است")]
         public string FirstName { get; set; }
-        /// <example>احمدی</example>
         [Required(ErrorMessage = "وارد کردن نام خوانوادگی الزامی است")]
         public string LastName { get; set; }
 

@@ -8,7 +8,7 @@ namespace BackOffice.Api.Controllers
 {
     [ApiController]
     [Route("api/v1/Report")]
-    [Authorize]
+  //  [Authorize]
     public class ReportController : BaseController
     {
         private readonly IMediator _mediator;
