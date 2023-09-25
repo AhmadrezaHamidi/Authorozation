@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "dgSpecHash": "Q+OTlxh+330Znm5V781x6XPwFQm7uQs69SaMTye8naxWuE938aUwW+M1j7xpt31RZZQIG1kV4CS5TncyFYYIiQ==",
+  "success": false,
+  "projectFilePath": "/Users/ahmadhfr/Desktop/10-08 RoleManagement/Src/Identity.Base/Identity.Base/Identity.Base.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://192.168.2.164/nugetserver/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.VisualStudio.Web.CodeGeneration.Design' from remote source 'http://192.168.2.164/nugetserver/nuget/FindPackagesById()?id='Microsoft.VisualStudio.Web.CodeGeneration.Design'&semVerLevel=2.0.0'.",
+      "libraryId": "Microsoft.VisualStudio.Web.CodeGeneration.Design"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.EntityFrameworkCore' from remote source 'http://192.168.2.164/nugetserver/nuget/FindPackagesById()?id='Microsoft.EntityFrameworkCore'&semVerLevel=2.0.0'.",
+      "libraryId": "Microsoft.EntityFrameworkCore"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.EntityFrameworkCore.Design' from remote source 'http://192.168.2.164/nugetserver/nuget/FindPackagesById()?id='Microsoft.EntityFrameworkCore.Design'&semVerLevel=2.0.0'.",
+      "libraryId": "Microsoft.EntityFrameworkCore.Design"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.EntityFrameworkCore.Tools' from remote source 'http://192.168.2.164/nugetserver/nuget/FindPackagesById()?id='Microsoft.EntityFrameworkCore.Tools'&semVerLevel=2.0.0'.",
+      "libraryId": "Microsoft.EntityFrameworkCore.Tools"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.AspNetCore.Identity.EntityFrameworkCore' from remote source 'http://192.168.2.164/nugetserver/nuget/FindPackagesById()?id='Microsoft.AspNetCore.Identity.EntityFrameworkCore'&semVerLevel=2.0.0'.",
+      "libraryId": "Microsoft.AspNetCore.Identity.EntityFrameworkCore"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.EntityFrameworkCore.SqlServer' from remote source 'http://192.168.2.164/nugetserver/nuget/FindPackagesById()?id='Microsoft.EntityFrameworkCore.SqlServer'&semVerLevel=2.0.0'.",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer"
+    }
+  ]
+}
